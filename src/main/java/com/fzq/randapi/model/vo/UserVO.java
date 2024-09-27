@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.model.vo;
+package com.fzq.randapi.model.vo;
 
 
 import lombok.Data;
@@ -17,39 +17,11 @@ public class UserVO implements Serializable {
     private Long id;
 
     /**
-     * User Name
-     */
-    private String userName;
-
-    /**
      * User Account
      */
     private String userAccount;
 
-    /**
-     * User Avatar
-     */
-    private String userAvatar;
 
-    /**
-     * email
-     */
-    private String email;
-
-    /**
-     * user Role：user / admin
-     */
-    private String userRole;
-
-    /**
-     * user balance, 30 by default on signing up
-     */
-    private Long balance;
-
-    /**
-     * account status（0- normal 1- blocked）
-     */
-    private Integer status;
 
 
 

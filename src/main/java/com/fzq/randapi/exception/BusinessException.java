@@ -36,8 +36,7 @@ public class BusinessException extends RuntimeException {
         this.description = description;
     }
 
-    public BusinessException(ErrorCode errorCode) {
-    }
+
 
     public int getCode() {
         return code;

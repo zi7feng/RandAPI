@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.config;
+package com.fzq.randapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

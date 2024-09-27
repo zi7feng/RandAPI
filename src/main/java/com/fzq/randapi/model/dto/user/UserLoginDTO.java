@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.model.dto.user;
+package com.fzq.randapi.model.dto.user;
 
 import lombok.Data;
 
