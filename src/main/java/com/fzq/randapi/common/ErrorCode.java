@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.common;
+package com.fzq.randapi.common;
 
 /**
  * error code

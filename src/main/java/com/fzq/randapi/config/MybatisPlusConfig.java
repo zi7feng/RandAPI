@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.config;
+package com.fzq.randapi.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("com.fzq.tapibackend.mapper")
+@MapperScan("com.fzq.randapi.mapper")
 public class MybatisPlusConfig {
 
     /**

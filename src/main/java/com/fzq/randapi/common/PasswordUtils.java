@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.common;
+package com.fzq.randapi.common;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
