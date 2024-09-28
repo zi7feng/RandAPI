@@ -4,8 +4,8 @@ spring:
 #    url: jdbc:mysql://localhost:3306/randapi?serverTimezone=America/New_York
 #    username: root
 #    password: 123456
-    url: jdbc:mysql://my-rds.c7aw24i0uq3z.us-west-2.rds.amazonaws.com:3306/RANDAPI
-    username: fzq
+    url: jdbc:mysql://18.227.48.65:3306/RANDAPI
+    username: root
     password: Gpt2345
   session:
     timeout: 86400
@@ -16,7 +16,7 @@ spring:
     #      database: logs
     redis:
       port: 6379
-      host: myredis-jyhybm.serverless.usw2.cache.amazonaws.com
+      host: 18.227.48.65:3306
       database: 0
   mybatis-plus:
     configuration:

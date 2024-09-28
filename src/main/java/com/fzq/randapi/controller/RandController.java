@@ -32,7 +32,7 @@ public class RandController {
     @GetMapping("/testConnection")
     public String testConnection() {
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://my-rds.c7aw24i0uq3z.us-west-2.rds.amazonaws.com:3306/RANDAPI",
+                "jdbc:mysql://18.227.48.65:3306:3306/RANDAPI",
                 "fzq", "Gpt12345")) {
             return "Connection successful!";
         } catch (SQLException e) {
@@ -45,10 +45,8 @@ public class RandController {
 
 
         try {
-            // 写入 Redis
             redisTemplate.opsForValue().set("testKey", "Hello Redis");
 
-            // 从 Redis 读取
             String value = redisTemplate.opsForValue().get("testKey");
 
             return "Redis connection successful! Retrieved value: " + value;
