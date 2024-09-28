@@ -28,7 +28,7 @@ public class RandController {
     public String testConnection() {
         try (Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://my-rds.c7aw24i0uq3z.us-west-2.rds.amazonaws.com:3306/RANDAPI",
-                "root", "Gpt12345")) {
+                "fzq", "Gpt12345")) {
             return "Connection successful!";
         } catch (SQLException e) {
             return "Connection failed: " + e.getMessage();
