@@ -32,7 +32,7 @@ public class RandController {
     @GetMapping("/testConnection")
     public String testConnection() {
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://18.227.48.65:3306:3306/RANDAPI",
+                "jdbc:mysql://172.31.5.208:3306/RANDAPI",
                 "fzq", "Gpt12345")) {
             return "Connection successful!";
         } catch (SQLException e) {
