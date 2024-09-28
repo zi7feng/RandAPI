@@ -6,7 +6,7 @@ spring:
 #    password: 123456
     url: jdbc:mysql://my-rds.c7aw24i0uq3z.us-west-2.rds.amazonaws.com:3306/RANDAPI
     username: fzq
-    password: Fzq980705%26
+    password: Gpt2345
   session:
     timeout: 86400
     store-type: redis
