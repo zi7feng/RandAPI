@@ -29,16 +29,16 @@ public class RandController {
     }
 
 
-    @GetMapping("/testConnection")
-    public String testConnection() {
-        try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://34.217.100.182:3306/RANDAPI",
-                "root", "Gpt12345")) {
-            return "Connection successful!";
-        } catch (SQLException e) {
-            return "Connection failed: " + e.getMessage();
-        }
-    }
+//    @GetMapping("/testConnection")
+//    public String testConnection() {
+//        try (Connection conn = DriverManager.getConnection(
+//                "jdbc:mysql://34.217.100.182:3306/RANDAPI",
+//                "root", "Gpt12345")) {
+//            return "Connection successful!";
+//        } catch (SQLException e) {
+//            return "Connection failed: " + e.getMessage();
+//        }
+//    }
 
     @GetMapping("/testRedisConnection")
     public String testRedisConnection() {
