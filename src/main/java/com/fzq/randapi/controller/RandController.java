@@ -1,6 +1,8 @@
 package com.fzq.randapi.controller;
 
 import com.fzq.randapi.service.RandService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -14,6 +16,7 @@ import java.sql.SQLException;
 
 @RestController
 @RequestMapping("/api/rand")
+@Tag(name = "Random Number API", description = "API for generating random numbers within a specific range.")
 public class RandController {
 
     @Autowired
@@ -23,6 +26,8 @@ public class RandController {
 
     private RedisTemplate<String, String> redisTemplate;
 
+    @Operation(summary = "Generate a random number between 0 and 10",
+            description = "This endpoint generates a random number between 0 and 10. The request must be signed with valid access credentials.")
     @GetMapping("/number/small")
     public int genRandNumberZeroToTen(HttpServletRequest request) {
         return randService.generateRandNumber(request);
@@ -40,19 +45,19 @@ public class RandController {
 //        }
 //    }
 
-    @GetMapping("/testRedisConnection")
-    public String testRedisConnection() {
-
-
-        try {
-            redisTemplate.opsForValue().set("testKey", "Hello Redis");
-
-            String value = redisTemplate.opsForValue().get("testKey");
-
-            return "Redis connection successful! Retrieved value: " + value;
-        } catch (Exception e) {
-            return "Redis connection failed: " + e.getMessage();
-        }
-    }
+//    @GetMapping("/testRedisConnection")
+//    public String testRedisConnection() {
+//
+//
+//        try {
+//            redisTemplate.opsForValue().set("testKey", "Hello Redis");
+//
+//            String value = redisTemplate.opsForValue().get("testKey");
+//
+//            return "Redis connection successful! Retrieved value: " + value;
+//        } catch (Exception e) {
+//            return "Redis connection failed: " + e.getMessage();
+//        }
+//    }
 
 }
